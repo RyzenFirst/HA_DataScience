@@ -1,0 +1,10 @@
+streamlit
+pandas
+numpy
+matplotlib.pyplot
+seaborn
+matplotlib.figure
+time
+plotly
+plotly.express
+altair

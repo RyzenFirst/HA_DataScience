@@ -124,8 +124,3 @@ with st.echo(code_location='below'):
     plt.rcParams.update({'font.size': 5})
     plt.title(f'{choice_3} and {choice_4}')
     st.pyplot(fig.figure)
-    """
-    Посмотрим на визуализации, которые нам может предложить библиотека altair
-    """
-    fig = alt.Chart(df).mark_point().encode(x='math score', y = 'reading score').interactive()
-    st.altair_chart(fig)

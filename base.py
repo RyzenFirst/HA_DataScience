@@ -58,7 +58,7 @@ with st.echo(code_location='below'):
     x2 = df['Pass Reading'].value_counts()
     df['Pass Writing'] = np.where(df['writing score'] >= number, 'Passed', 'Not Passed')
     x3 = df['Pass Writing'].value_counts()
-    df['Passed All'] = (np.where(np.logical_and(df['writing score'] > number,
+    df['Passed All'] = (np.where(np.logical_and.reduce(df['writing score'] > number,
                                                 df['reading score'] > number,
                                                 df['math score'] > number), 'Passed', 'Not Passed'))
     x4 = df['Passed All'].value_counts()

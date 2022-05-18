@@ -3,11 +3,8 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
-from matplotlib.figure import Figure
 import time
-import plotly as pl
 import plotly.express as px
-import altair as alt
 """
 Погружение в мир оценок))))
 """
@@ -40,7 +37,6 @@ with st.echo(code_location='below'):
     plt.ylabel('Number of students')
     st.pyplot(fig.figure)
 
-#   from the video of one indus
     """
     (Great! Now we can move further and find more interesting information and take a look at the correlation 
     between different factors)

@@ -8,3 +8,4 @@ time
 plotly
 plotly.express
 altair
+matplotlib

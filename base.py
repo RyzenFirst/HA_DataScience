@@ -51,12 +51,6 @@ with st.echo(code_location='below'):
     corr_df = corr_df.corr()
     st.write(corr_df)
     """
-    Посмотрим на визуализации, которые нам может предложить библиотека altair и
-    используем ее для построения heatmap корреляции
-    """
-    fig = alt.Chart(corr_df).mark_rect().encode(x=alt.X('source.x:O'), y=alt.Y('source.y:O'),color=alt.Color('source.score:Q')).interactive()
-    st.altair_chart(fig)
-    """
     How many students passed the minimum for exams
     """
     number = st.slider('Выберите проходной балл', min_value=0, max_value=100, step=5)

@@ -5,8 +5,6 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 import time
 import plotly.express as px
-import sys
-sys.setrecursionlimit(2000)
 """
 Погружение в мир оценок))))
 """
@@ -45,7 +43,7 @@ with st.echo(code_location='below'):
     """
     col = (st.selectbox('Select the object of correlation', ['race/ethnicity',
                                                              'test preparation course', 'lunch', 'gender']))
-    corr_df = df.pivot_table(columns=col) #чтобы посмотреть на корреляцию
+    corr_df = df.pivot_table(columns=col) #чтобы посмотреть на корреляцию, которая тем не менее, немного бессмысленная)
     corr_df = corr_df.corr()
     st.write(corr_df)
     """
@@ -58,8 +56,8 @@ with st.echo(code_location='below'):
     x2 = df['Pass Reading'].value_counts()
     df['Pass Writing'] = np.where(df['writing score'] >= number, 'Passed', 'Not Passed')
     x3 = df['Pass Writing'].value_counts()
-    df['Passed All'] = (np.where(np.logical_and.reduce(df['writing score'] > number,
-                                                df['reading score'] > number,
+    df['Passed All'] = (np.where(np.logical_and(np.logical_and(df['writing score'] > number,
+                                                df['reading score'] > number),
                                                 df['math score'] > number), 'Passed', 'Not Passed'))
     x4 = df['Passed All'].value_counts()
     col1, col2, col3 = st.columns(3)

@@ -74,7 +74,7 @@ with st.echo(code_location='below'):
         st.bar_chart(x3)
     st.header('All exams')
     st.bar_chart(x4)
-    from the gallery streamlit
+#    from the gallery streamlit
     """
     Красивое распределение солнцем
     """

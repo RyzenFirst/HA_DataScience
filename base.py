@@ -49,29 +49,29 @@ with st.echo(code_location='below'):
     """
     How many students passed the minimum for exams
     """
-    number = st.slider('Выберите проходной балл', min_value=0, max_value=100, step=5)
-    df['Pass Math'] = np.where(df['math score'] >= number, 'Passed', 'Not Passed')
-    x1 = df['Pass Math'].value_counts()
-    df['Pass Reading'] = np.where(df['reading score'] >= number, 'Passed', 'Not Passed')
-    x2 = df['Pass Reading'].value_counts()
-    df['Pass Writing'] = np.where(df['writing score'] >= number, 'Passed', 'Not Passed')
-    x3 = df['Pass Writing'].value_counts()
-    df['Passed All'] = (np.where(np.logical_and(df['writing score'] > number,
-                                                df['reading score'] > number,
-                                                df['math score'] > number), 'Passed', 'Not Passed'))
-    x4 = df['Passed All'].value_counts()
-    col1, col2, col3 = st.columns(3)
-    with col1:
-        st.header('Math')
-        st.bar_chart(x1)
-    with col2:
-        st.header('Reading')
-        st.bar_chart(x2)
-    with col3:
-        st.header('Writing')
-        st.bar_chart(x3)
-    st.header('All exams')
-    st.bar_chart(x4)
+    # number = st.slider('Выберите проходной балл', min_value=0, max_value=100, step=5)
+    # df['Pass Math'] = np.where(df['math score'] >= number, 'Passed', 'Not Passed')
+    # x1 = df['Pass Math'].value_counts()
+    # df['Pass Reading'] = np.where(df['reading score'] >= number, 'Passed', 'Not Passed')
+    # x2 = df['Pass Reading'].value_counts()
+    # df['Pass Writing'] = np.where(df['writing score'] >= number, 'Passed', 'Not Passed')
+    # x3 = df['Pass Writing'].value_counts()
+    # df['Passed All'] = (np.where(np.logical_and(df['writing score'] > number,
+    #                                             df['reading score'] > number,
+    #                                             df['math score'] > number), 'Passed', 'Not Passed'))
+    # x4 = df['Passed All'].value_counts()
+    # col1, col2, col3 = st.columns(3)
+    # with col1:
+    #     st.header('Math')
+    #     st.bar_chart(x1)
+    # with col2:
+    #     st.header('Reading')
+    #     st.bar_chart(x2)
+    # with col3:
+    #     st.header('Writing')
+    #     st.bar_chart(x3)
+    # st.header('All exams')
+    # st.bar_chart(x4)
     # from the gallery streamlit
     """
     Красивое распределение солнцем

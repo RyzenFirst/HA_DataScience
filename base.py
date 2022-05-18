@@ -25,7 +25,7 @@ with st.echo(code_location='below'):
     st.title('Visualization')
     @st.cache(allow_output_mutation=True)   #etting data
     def get_data():
-        return pd.read_csv(r"C:\Users\dimab\Desktop\StudentsPerformance.csv")
+        return pd.read_csv("StudentsPerformance.csv")
     df = get_data()
     st.write(df.head())
     st.write(df.describe())
